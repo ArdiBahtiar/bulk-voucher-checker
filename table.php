@@ -1,5 +1,5 @@
 <?php
-include("code.php");
+include("compare.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,9 +22,9 @@ include("code.php");
     </thead>
     <tbody>
   <?php
-      if(is_array($datacheck)){      
+      if(is_array($fetchdata)){      
       $sn=1;
-      foreach($datacheck as $data){
+      foreach($fetchdata as $data){
     ?>
       <tr>
 
@@ -38,7 +38,10 @@ include("code.php");
       $sn++;}}else{ ?>
       <tr>
         <td colspan="8">
-    <?php echo $datacheck; ?>
+    <?php 
+      echo $fetchdata; 
+      echo $truncate_data;  
+    ?>
   </td>
     <tr>
     <?php
@@ -49,5 +52,7 @@ include("code.php");
 </div>
 </div>
 </div>
+
+<a href="index.php">Kembali ke Menu awal</a>
 </body>
 </html>
