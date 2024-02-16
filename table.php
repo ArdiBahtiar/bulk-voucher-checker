@@ -42,7 +42,7 @@ include("compare.php");
         <td colspan="8">
     <?php 
       echo $fetchdata; 
-      echo $truncate_data;  
+      // echo $truncate_data;  
     ?>
   </td>
     <tr>

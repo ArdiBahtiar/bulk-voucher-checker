@@ -39,8 +39,8 @@ if(isset($_POST['save_excel_data']))
                 $Keterangan = $row['4'];
                 
                 // $folioQuery = "INSERT INTO pools_db (ID,catalog_id,folio_id) VALUES ('$ID','$catalog_id','$folio_id')";
-                $folioQuery = "INSERT INTO input_db (folio_id,issue_date,expired_date,PJ,Keterangan) VALUES ('$folio_id','$issue_date','$expiry_date','$PJ','$Keterangan')";
-                $inputtosql = mysqli_query($conn, $folioQuery);
+                $folioQuery = "INSERT INTO public.input_db (folio_id,issue_date,expired_date,pj,keterangan) VALUES ('$folio_id','$issue_date','$expiry_date','$PJ','$Keterangan');";
+                $inputtosql = pg_query($conn, $folioQuery);
                 $msg = true;
             }
             else
