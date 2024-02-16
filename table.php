@@ -7,6 +7,8 @@ include("compare.php");
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+<br> 
+<a href="index.php">Kembali ke Menu awal</a>
 <div class="container">
  <div class="row">
    <div class="col-sm-8">
@@ -32,7 +34,7 @@ include("compare.php");
       <td><?php echo $data['issue_date']??''; ?></td>
       <td><?php echo $data['expired_date']??''; ?></td>
       <td><?php echo $data['PJ']??''; ?></td>
-      <td><?php echo $data['keterangan']??''; ?></td>
+      <td><?php echo $data['Keterangan']??''; ?></td>
      </tr>
      <?php
       $sn++;}}else{ ?>
@@ -52,7 +54,5 @@ include("compare.php");
 </div>
 </div>
 </div>
-
-<a href="index.php">Kembali ke Menu awal</a>
 </body>
 </html>

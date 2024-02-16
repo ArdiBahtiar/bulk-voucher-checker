@@ -19,10 +19,9 @@ function fetch_data($db, $table_name, $columns)
         
     else {
         $columnName = implode(", ", $columns);
-        $datacheck = "SELECT * FROM input_db WHERE folio_id in (SELECT folio_id FROM pools_db)";
+        $datacheck = "SELECT * FROM input_db WHERE EXISTS (SELECT folio_id FROM pools_db WHERE input_db.folio_id = pools_db.folio_id)";
         $result = mysqli_query($db, $datacheck);
-        // $validated = "SELECT * FROM `tbl_voucher` WHERE voucher_code = 0";
-        // $result = mysqli_query($db, $validated);
+
 
         if($result== true){ 
             if (mysqli_num_rows($result) > 0) {
